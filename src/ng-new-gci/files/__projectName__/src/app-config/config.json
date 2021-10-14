@@ -1,0 +1,8 @@
+{
+    "urls": {
+        "test": "http://localhost:4200"
+    },
+    "googleAnalytics": {
+        "code": "UA-574031-47"
+    }
+}

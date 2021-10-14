@@ -1,0 +1,9 @@
+{
+    "angular-cli": "12.2.7",
+    "material": "^12.2.8",
+    "flexLayout": "^12.0.0-beta.35",
+    "cypress": "~8.5.0",
+    "husky": "~7.0.2",
+    "prettier": "~2.4.1",
+    "pwa": "^12.2.7"
+}

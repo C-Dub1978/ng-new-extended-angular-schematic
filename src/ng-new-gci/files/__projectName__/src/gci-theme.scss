@@ -1,0 +1,99 @@
+@import '~@angular/material/theming';
+@import './gci-palette';
+@import './fonts';
+@font-face {
+  font-family: 'Gotham';
+  font-display: swap;
+  src: url($gotham-book-woff2-font-path) format('woff2'),
+    url($gotham-book-woff-font-path) format('woff'),
+    url($gotham-book-eot-font-path) format('eot'),
+    url($gotham-book-svg-font-path) format('svg');
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-display: swap;
+  src: url($gotham-book-italic-woff2-font-path) format('woff2'),
+    url($gotham-book-italic-woff-font-path) format('woff'),
+    url($gotham-book-italic-eot-font-path) format('eot'),
+    url($gotham-book-italic-svg-font-path) format('svg');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-display: swap;
+  src: url($gotham-medium-woff2-font-path) format('woff2'),
+    url($gotham-medium-woff-font-path) format('woff'),
+    url($gotham-medium-eot-font-path) format('eot'),
+    url($gotham-medium-svg-font-path) format('svg');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-display: swap;
+  src: url($gotham-medium-italic-woff2-font-path) format('woff2'),
+    url($gotham-medium-italic-woff-font-path) format('woff'),
+    url($gotham-medium-italic-eot-font-path) format('eot'),
+    url($gotham-medium-italic-svg-font-path) format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Gotham, Roboto, "Helvetica Neue", sans-serif, monospace'
+);
+
+$gci-primary: mat-palette($mat-glacierblue);
+$gci-primary-accent: mat-palette($mat-teal, 400, 800);
+$gci-primary-warn: mat-palette($mat-gcired);
+
+$gci-app-primary-dark: mat-palette($mat-darkgray);
+$gci-app-accent-dark: mat-palette($mat-teal);
+
+$gci-app-toolbar-primary: mat-palette($mat-lightgray, 500, 500);
+$gci-app-toolbar-accent: mat-palette($mat-teal, 400, 800);
+
+$gci-app-step-primary: mat-palette($mat-glacierblue);
+$gci-app-step-accent: mat-palette($mat-glacierblue, 800, 900);
+
+$gci-app-select-primary: mat-palette($mat-glacierblue);
+$gci-app-select-accent: mat-palette($mat-glacierblue, 800, 900);
+
+$gci-app-form-button-primary: mat-palette($mat-glacierblue);
+$gci-app-form-button-accent: mat-palette($mat-glacierblue, 800, 900);
+
+$gci-theme: mat-light-theme(
+  $gci-primary,
+  $gci-primary-accent,
+  $gci-primary-accent
+);
+
+$gci-stepper-theme: mat-light-theme(
+  $gci-app-step-primary,
+  $gci-app-step-accent,
+  $gci-primary-warn
+);
+
+$gci-toolbar-theme: mat-light-theme(
+  $gci-app-toolbar-primary,
+  $gci-app-toolbar-accent,
+  $gci-primary-warn
+);
+
+$gci-form-button-theme: mat-light-theme(
+  $gci-app-form-button-primary,
+  $gci-app-form-button-accent,
+  $gci-primary-warn
+);
+
+$gci-dark: mat-light-theme($gci-app-primary-dark, $gci-app-accent-dark);
+
+// include the custom theme object into the angular material theme
+@include mat-core($custom-typography);
+@include angular-material-theme($gci-theme);
+@include mat-stepper-theme($gci-stepper-theme);
+@include mat-toolbar-theme($gci-toolbar-theme);
+@include mat-button-theme($gci-form-button-theme);
+@include mat-form-field-theme($gci-stepper-theme);

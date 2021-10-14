@@ -1,0 +1,10 @@
+{
+   "$schema": "https://on.cypress.io/cypress.schema.json",
+    "defaultCommandTimeout": 8000,
+    "pingUrl": "https://esso-ee.gci.com/",
+    "baseRemoteUrl": "",
+    "baseUrl": "http://localhost:4200",
+    "fixturesFolder": "cypress/fixtures",
+    "requestTimeout": 5000,
+    "responseTimeout": 30000
+}

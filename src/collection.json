@@ -1,0 +1,16 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "extends": ["@schematics/angular"],
+  "schematics": {
+    "ng-new-gci": {
+      "description": "A schematic for creating base GCI angular projects.",
+      "factory": "./ng-new-gci/index#gciAngularBase",
+      "schema": "./ng-new-gci/schema.json"
+    },
+    "ng-add": {
+      "description": "A schematic for create base GCI angular projects",
+      "factory": "./ng-new-gci/index#gciAngularBase",
+      "schema": "./ng-new-gci/schema.json"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "./node_modules/@angular/pwa/pwa/schema.json",
+    "index": "src/index.html",
+    "assetGroups": [
+      {
+        "name": "app",
+        "installMode": "prefetch",
+        "resources": {
+          "files": [
+            "src/index.html",
+            "src/*.css",
+            "src/*.js",
+            "src/manifest.webmanifest"
+          ]
+        }
+      },
+      {
+        "name": "assets",
+        "installMode": "lazy",
+        "updateMode": "prefetch",
+        "resources": {
+          "files": [
+            "src/assets/**",
+            "/*.(cur|jpg|png|webp|gif|otf|ttf|ani)",
+            "src/fonts/gotham/*.woff2",
+            "src/fonts/gotham/*.woff",
+            "src/fonts/gotham/*.svg",
+            "src/fonts/gotham/*.eot"
+          ]
+        }
+      }
+    ],
+    "dataGroups": [
+      {
+        "name": "config",
+        "version": 1,
+        "urls": ["src/app-config/config.json"],
+        "cacheConfig": {
+          "strategy": "freshness",
+          "maxAge": "1d",
+          "maxSize": 1
+        }
+      },
+      {
+        "name": "icons",
+        "version": 1,
+        "urls": ["https://fonts.googleapis.com/icon?family=Material+Icons"],
+        "cacheConfig": {
+          "strategy": "performance",
+          "maxAge": "7d",
+          "maxSize": 1
+        }
+      },
+      {
+        "name": "polyfills",
+        "version": 1,
+        "urls": [
+          "https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"
+        ],
+        "cacheConfig": {
+          "strategy": "performance",
+          "maxAge": "30d",
+          "maxSize": 1
+        }
+      }
+    ]
+  }

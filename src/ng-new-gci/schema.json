@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "ng-new-gci",
+    "title": "ng new gci angular project schema",
+    "type": "object",
+    "description": "Used to bootstrap new angular projects for GCI",
+    "properties": {
+        "projectName": {
+            "type": "string",
+            "description": "The name of the new project",
+            "x-prompt": {
+                "message": "Please type the name of the new Angular project (case sensitive - DO NOT ADD SPACES, USE DASHES)"
+            }
+        },
+        "addRouting": {
+            "type": "boolean",
+            "description": "Angular routing",
+            "default": true,
+            "x-prompt": {
+                "message": "Add Angular routing? (Default is yes)"
+            }
+        },
+        "dependencies": {
+            "type": "array",
+            "description": "A list of dependencies to install",
+            "uniqueItems": true,
+            "items": {
+                "type": "string"
+            },
+            "x-prompt": {
+                "message": "Please select all dependencies to add to the project",
+                "type": "list",
+                "multiselect": true,
+                "items": [
+                    { "label": "Material", "value": "material" },
+                    { "label": "Angular Flex Layout", "value": "flexLayout" },
+                    { "label": "Cypress", "value": "cypress" },
+                    { "label": "Husky", "value": "husky" },
+                    { "label": "Prettier", "value": "prettier" }
+                ]
+            }
+        },
+        "pwa": {
+            "type": "boolean",
+            "description": "Whether or not its a progressive web app",
+            "default": false,
+            "x-prompt": {
+                "message": "Will this be a progressive web app?"
+            }
+        }
+    },
+    "required": [
+        "projectName",
+        "addRouting",
+        "dependencies",
+        "pwa"
+    ]
+}

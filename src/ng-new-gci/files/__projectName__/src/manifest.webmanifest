@@ -1,0 +1,51 @@
+{
+    "name": "<%= projectName %>",
+    "short_name": "<%= projectName %>",
+    "theme_color": "#b0102f",
+    "background_color": "#fafafa",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "assets/logos/GCI_Logo_Foresee_72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/logos/GCI_Logo_Foresee_96x96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/logos/GCI_Logo_Foresee_128x128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/logos/GCI_Logo_Foresee_144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/logos/GCI_Logo_Foresee_152x152.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/logos/GCI_Logo_Foresee_192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/logos/GCI_Logo_Foresee_384x384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/logos/GCI_Logo_Foresee_512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

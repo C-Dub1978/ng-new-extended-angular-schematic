@@ -1,0 +1,44 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "baseUrl": ".",
+      "rootDir": ".",
+      "outDir": "./dist/out-tsc",
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "alwaysStrict": true,
+      "sourceMap": true,
+      "declaration": false,
+      "noUnusedParameters": false,
+      "noUnusedLocals": false,
+      "noImplicitAny": false,
+      "noImplicitThis": true,
+      "downlevelIteration": true,
+      "experimentalDecorators": true,
+      "moduleResolution": "node",
+      "importHelpers": true,
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "strictPropertyInitialization": false,
+      "strictNullChecks": false,
+      "allowSyntheticDefaultImports": true,
+      "target": "es2015",
+      "module": "esnext",
+      "typeRoots": ["node_modules/@types"],
+      "plugins": [{ "name": "@angular/language-service" }],
+      "lib": [
+        "es2018",
+        "dom"
+      ]
+    },
+    "angularCompilerOptions": {
+      "enableI18nLegacyMessageIdFormat": false,
+      "strictInjectionParameters": true,
+      "strictInputAccessModifiers": true,
+      "strictTemplates": true
+    },
+    "exclude": ["node_modules", "tmp"]
+  }
+  
